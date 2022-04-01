@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Mulish:ital,wght@1,600;1,700&family=Nanum+Gothic:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(45deg, #ffafbd, #ffc3a0);
+  position: relative;
+}
+.container {
+  /* margin-top: 50px; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  /* background: linear-gradient(45deg, #ffafbd, #ffc3a0); */
+}
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: rgba(39, 67, 94, 0.479);
+  text-align: center;
+  color: aliceblue;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #000;
+}
+.card__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #f2276a;
+  overflow: hidden;
+  margin: 0 auto;
+  transform: translatey(25px);
+  transition: all 0.5s ease;
+}
+.card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card__img:hover {
+  width: 100%;
+  height: 100%;
+  border-radius: unset;
+  transform: unset;
+  border: unset;
+  padding: 0;
+  cursor: pointer;
+}
+.card__heading {
+  margin-top: 30px;
+}
+.card__title {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #ffafbd;
+}
+.card__social {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.card__social a {
+  color: unset;
+  transition: color 0.5s ease;
+}
+.card__social a:hover {
+  color: #f2276a;
+}
+
+.card__btn {
+  margin-top: 40px;
+}
+
+.card__btn button {
+  padding: 5px 20px;
+  border-radius: 8px;
+  border: 1px solid #ffafbd;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.card__btn button:hover {
+  background-color: #f2276a;
+  cursor: pointer;
+}
+
+.heart {
+  width: 70px;
+  height: 70px;
+  background-color: #f2276a;
+  transform: rotate(-45deg);
+  position: relative;
+  box-shadow: -10px 10px 90px #f20044;
+  animation: heart 0.5s ease-in infinite;
+  cursor: pointer;
+}
+
+@keyframes heart {
+  0% {
+    transform: rotate(-45deg) scale(1.1);
+  }
+  80% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1.1);
+  }
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: -50%;
+  background-color: #f2276a;
+  border-radius: 50px;
+  box-shadow: -10px 10px 90px #f20044;
+}
+
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  right: -50%;
+  background-color: #f2276a;
+  border-radius: 50px;
+  box-shadow: 10px 10px 90px #f20044;
+}
+
+.heading {
+  width: 100%;
+  text-transform: uppercase;
+  color: #f2276a;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translatey(-130%);
+  transition: all 0.5s ease;
+}
+
+.heading button {
+  padding: 5px 20px;
+  border-radius: 8px;
+  border: 1px solid #f2276a;
+  outline: none;
+  background-color: transparent;
+  color: #f2276a;
+  transition: all 0.5s ease;
+  margin-left: 20px;
+  transition: all 0.5s ease;
+}
+
+.heading button:hover {
+  cursor: pointer;
+  background-color: #f2276a;
+  color: white;
+}
+
+.heading-js-one.active {
+  transform: translatey(0);
+  transition: all 0.5s ease;
+}
+
+.heading-js-tow.active {
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+.heading-js-three.active {
+  transform: translateX(0);
+  transition: all 0.5s ease;
+}
+
+/* dark  */
+
+.btn {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translatex(-50%);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  cursor: pointer;
+}
+.btn.active {
+  background-color: #222;
+  color: #fff;
+}
+.btn:not(.active):hover {
+  cursor: pointer;
+}
+
+/* Dark Mode */
+.dark {
+  color: #e8edec;
+  background-color: #222;
+}
