@@ -46,3 +46,8 @@ Button3.addEventListener("click", () => {
 //   var element = document.body;
 //   element.classList.toggle("dark");
 // });
+
+// btn.addEventListener("click", () => {
+//   var element = document.body;
+//   element.classList.toggle("dark");
+// });
